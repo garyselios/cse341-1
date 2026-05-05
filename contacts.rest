@@ -1,0 +1,18 @@
+
+### GET all contacts (Local)
+GET http://localhost:8080/contacts
+
+###
+
+### GET single contact by ID (Local)
+GET http://localhost:8080/contacts/69fa5bfcd08a84904aeea234
+
+###
+
+### GET all contacts (Render)
+GET https://cse341-1-h9pu.onrender.com/contacts
+
+###
+
+### GET single contact by ID (Render)
+GET https://cse341-1-h9pu.onrender.com/contacts/69fa5bfcd08a84904aeea234
