@@ -1,12 +1,15 @@
 const express = require('express');
 const cors = require('cors');
-const mongoose = require('mongoose');
 require('dotenv').config();
 
+const connectDB = require('./config/db');
 const contactsRoutes = require('./routes/contacts');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+
+// Connect to MongoDB
+connectDB();
 
 // Middleware
 app.use(cors());
@@ -19,11 +22,6 @@ app.use('/contacts', contactsRoutes);
 app.get('/', (req, res) => {
   res.send('Contacts API is running. Use /contacts endpoint.');
 });
-
-// Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('✅ Connected to MongoDB'))
-  .catch(err => console.error('❌ MongoDB connection error:', err));
 
 app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
