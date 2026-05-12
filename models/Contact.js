@@ -21,6 +21,8 @@ const contactSchema = new mongoose.Schema({
     type: String,
     required: true
   }
+}, {
+  versionKey: false  // delete __v
 });
 
 module.exports = mongoose.model('Contact', contactSchema);

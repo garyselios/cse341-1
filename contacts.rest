@@ -1,4 +1,3 @@
-
 ### GET all contacts (Local)
 GET http://localhost:8080/contacts
 
@@ -16,3 +15,69 @@ GET https://cse341-1-h9pu.onrender.com/contacts
 
 ### GET single contact by ID (Render)
 GET https://cse341-1-h9pu.onrender.com/contacts/69fa5bfcd08a84904aeea234
+
+###
+
+### POST - Create a new contact (Local)
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Maria",
+  "lastName": "Fernandez",
+  "email": "mfernandez@example.com",
+  "favoriteColor": "purple",
+  "birthday": "1985-07-20"
+}
+
+###
+
+### POST - Create a new contact (Render)
+POST https://cse341-1-h9pu.onrender.com/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Luis",
+  "lastName": "Fernandez",
+  "email": "lfernandez@example.com",
+  "favoriteColor": "orange",
+  "birthday": "1988-03-12"
+}
+
+###
+
+### PUT - Update a contact (Local)
+PUT http://localhost:8080/contacts/69fa5bfcd08a84904aeea234
+Content-Type: application/json
+
+{
+  "firstName": "Carlos",
+  "lastName": "Martinez",
+  "email": "cmartinez@example.com",
+  "favoriteColor": "green",
+  "birthday": "1995-03-08"
+}
+
+###
+
+### PUT - Update a contact (Render)
+PUT https://cse341-1-h9pu.onrender.com/contacts/69fa5bfcd08a84904aeea234
+Content-Type: application/json
+
+{
+  "firstName": "Juan Carlos",
+  "lastName": "Lopez Martinez",
+  "email": "juancarlos@example.com",
+  "favoriteColor": "blue",
+  "birthday": "1990-05-15"
+}
+
+###
+
+### DELETE - Delete a contact (Local)
+DELETE http://localhost:8080/contacts/6a010cbf08aba2d0ffb275e6
+
+###
+
+### DELETE - Delete a contact (Render)
+DELETE https://cse341-1-h9pu.onrender.com/contacts/6a010cbf08aba2d0ffb275e6
